@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {
   NbPosition,
   NbSortDirection,
-  NbSortRequest,
+  NbSortRequest, NbTreeGridComponent,
   NbTreeGridDataSource,
   NbTreeGridDataSourceBuilder,
+  NbTreeGridRowComponent,
 } from '@nebular/theme';
 import {ManejoEntradaService} from '../../../../../../services/manejo-entrada-service.service';
 import {ActivatedRoute, Router} from '@angular/router';
@@ -22,7 +23,6 @@ export interface ManejoEntrada {
   data: Date;
   items?: number;
 }
-
 @Component({
   selector: 'ngx-manejo-entrada-index-list-table',
   templateUrl: './manejo-entrada-index-list-table.component.html',

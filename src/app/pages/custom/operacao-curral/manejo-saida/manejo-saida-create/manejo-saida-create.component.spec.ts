@@ -8,7 +8,7 @@ describe('ManejoSaidaCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoSaidaCreateComponent ],
+      declarations: [ ManejoSaidaCreateComponent ]
     })
     .compileComponents();
   }));

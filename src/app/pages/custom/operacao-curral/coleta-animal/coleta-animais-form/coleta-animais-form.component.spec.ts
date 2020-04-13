@@ -8,7 +8,7 @@ describe('ColetaAnimaisFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColetaAnimaisFormComponent ],
+      declarations: [ ColetaAnimaisFormComponent ]
     })
     .compileComponents();
   }));

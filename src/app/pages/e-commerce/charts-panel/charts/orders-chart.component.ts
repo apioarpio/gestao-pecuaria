@@ -1,9 +1,9 @@
-import { AfterViewInit, Component, Input, OnChanges, OnDestroy } from '@angular/core';
-import { NbThemeService } from '@nebular/theme';
-import { delay, takeWhile } from 'rxjs/operators';
+import {AfterViewInit, Component, Input, OnChanges, OnDestroy} from '@angular/core';
+import {NbThemeService} from '@nebular/theme';
+import {delay, takeWhile} from 'rxjs/operators';
 
-import { OrdersChart } from '../../../../@core/data/orders-chart';
-import { LayoutService } from '../../../../@core/utils/layout.service';
+import {OrdersChart} from '../../../../@core/data/orders-chart';
+import {LayoutService} from '../../../../@core/utils/layout.service';
 
 @Component({
   selector: 'ngx-orders-chart',
@@ -173,7 +173,7 @@ export class OrdersChartComponent implements AfterViewInit, OnDestroy, OnChanges
   }
 
   getSecondLine(eTheme) {
-    return         {
+    return {
       type: 'line',
       smooth: true,
       symbolSize: 20,
@@ -261,9 +261,38 @@ export class OrdersChartComponent implements AfterViewInit, OnDestroy, OnChanges
   }
 
   updateOrdersChartOptions(ordersChartData: OrdersChart) {
+
+    const labelCustom = ordersChartData.chartLabel.map(label => {
+      switch (label) {
+        case 'Mon':
+          label = 'Jan';
+          return 'Janeiro';
+        case 'Tue':
+          label = 'Jan';
+          return 'Fevereiro';
+        case 'Wed':
+          label = 'Jan';
+          return 'Março';
+        case 'Thu':
+          label = 'Jan';
+          return 'Abril';
+        case 'Fri':
+          label = 'Jan';
+          return 'Maio';
+        case 'Sat':
+          label = 'Jan';
+          return 'Junho';
+        case 'Sun':
+          label = 'Jan';
+          return 'Julho';
+        default:
+          return label;
+      }
+    });
+
     const options = this.option;
     const series = this.getNewSeries(options.series, ordersChartData.linesData);
-    const xAxis = this.getNewXAxis(options.xAxis, ordersChartData.chartLabel);
+    const xAxis = this.getNewXAxis(options.xAxis, labelCustom);
 
     this.option = {
       ...options,

@@ -8,7 +8,7 @@ describe('ManejoFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoFormComponent ],
+      declarations: [ ManejoFormComponent ]
     })
     .compileComponents();
   }));

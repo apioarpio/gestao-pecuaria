@@ -1,6 +1,6 @@
-import { Injectable } from '@angular/core';
-import { of as observableOf, Observable } from 'rxjs';
-import { LiveUpdateChart, PieChart, EarningData } from '../data/earning';
+import {Injectable} from '@angular/core';
+import {of as observableOf, Observable} from 'rxjs';
+import {LiveUpdateChart, PieChart, EarningData} from '../data/earning';
 
 @Injectable()
 export class EarningService extends EarningData {
@@ -12,7 +12,7 @@ export class EarningService extends EarningData {
   private pieChartData = [
     {
       value: 50,
-      name: 'Bitcoin',
+      name: 'Boi Gordo',
     },
     {
       value: 25,
@@ -25,7 +25,7 @@ export class EarningService extends EarningData {
   ];
 
   private liveUpdateChartData = {
-    bitcoin: {
+    boigordo: {
       liveChart: [],
       delta: {
         up: true,
@@ -33,7 +33,7 @@ export class EarningService extends EarningData {
       },
       dailyIncome: 45895,
     },
-    tether: {
+    boimagro: {
       liveChart: [],
       delta: {
         up: false,
@@ -80,7 +80,7 @@ export class EarningService extends EarningData {
   }
 
   getEarningLiveUpdateCardData(currency): Observable<any[]> {
-    const data = this.liveUpdateChartData[currency.toLowerCase()];
+    const data = this.liveUpdateChartData[currency.toLowerCase().replace(' ', '')];
     const newValue = this.generateRandomLiveChartData();
 
     data.liveChart.shift();
@@ -90,7 +90,7 @@ export class EarningService extends EarningData {
   }
 
   getEarningCardData(currency: string): Observable<LiveUpdateChart> {
-    const data = this.liveUpdateChartData[currency.toLowerCase()];
+    const data = this.liveUpdateChartData[currency.toLowerCase().replace(' ', '')];
 
     data.liveChart = this.getDefaultLiveChartData(150);
 

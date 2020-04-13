@@ -8,7 +8,7 @@ describe('ManejoInternoIndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoInternoIndexComponent ],
+      declarations: [ ManejoInternoIndexComponent ]
     })
     .compileComponents();
   }));

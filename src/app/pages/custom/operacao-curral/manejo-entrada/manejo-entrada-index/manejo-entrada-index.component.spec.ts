@@ -8,7 +8,7 @@ describe('ManejoEntradaIndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoEntradaIndexComponent ],
+      declarations: [ ManejoEntradaIndexComponent ]
     })
     .compileComponents();
   }));

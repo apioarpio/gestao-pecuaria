@@ -31,8 +31,7 @@ import {ColetaAnimaisFormComponent} from './coleta-animal/coleta-animais-form/co
 import {IndicadoresColetaComponent} from './coleta-animal/indicadores-coleta/indicadores-coleta.component';
 import {NgxEchartsModule} from 'ngx-echarts';
 import {AnimaisColetadosListComponent} from './coleta-animal/animais-coletados-list/animais-coletados-list.component';
-// tslint:disable-next-line:max-line-length
-import {TiposAnimaisColetadosComponent} from './coleta-animal/tipos-animais-coletados/tipos-animais-coletados.component';
+import {TiposAnimaisColetadosComponent} from "./coleta-animal/tipos-animais-coletados/tipos-animais-coletados.component";
 
 @NgModule({
   declarations: [

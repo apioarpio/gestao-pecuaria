@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {Router, RouterModule, Routes} from '@angular/router';
 import {ColetaAnimalComponent} from './coleta-animal/coleta-animal.component';
 import {ManejoEntradaIndexComponent} from './manejo-entrada/manejo-entrada-index/manejo-entrada-index.component';
 import {ManejoEntradaCreateComponent} from './manejo-entrada/manejo-entrada-create/manejo-entrada-create.component';

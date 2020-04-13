@@ -1,7 +1,7 @@
-import { Component, OnDestroy } from '@angular/core';
-import { TrafficList, TrafficListData } from '../../../@core/data/traffic-list';
-import { TrafficBarData, TrafficBar } from '../../../@core/data/traffic-bar';
-import { takeWhile } from 'rxjs/operators';
+import {Component, OnDestroy} from '@angular/core';
+import {TrafficList, TrafficListData} from '../../../@core/data/traffic-list';
+import {TrafficBarData, TrafficBar} from '../../../@core/data/traffic-bar';
+import {takeWhile} from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-traffic-reveal-card',
@@ -15,12 +15,12 @@ export class TrafficRevealCardComponent implements OnDestroy {
   trafficBarData: TrafficBar;
   trafficListData: TrafficList;
   revealed = false;
-  period: string = 'week';
+  period: string = 'area';
 
   constructor(private trafficListService: TrafficListData,
               private trafficBarService: TrafficBarData) {
     this.getTrafficFrontCardData(this.period);
-    this.getTrafficBackCardData(this.period);
+    // this.getTrafficBackCardData(this.period);
   }
 
   toggleView() {
@@ -31,15 +31,15 @@ export class TrafficRevealCardComponent implements OnDestroy {
     this.period = value;
 
     this.getTrafficFrontCardData(value);
-    this.getTrafficBackCardData(value);
+    // this.getTrafficBackCardData(value);
   }
 
   getTrafficBackCardData(period: string) {
-    this.trafficBarService.getTrafficBarData(period)
-      .pipe(takeWhile(() => this.alive ))
-      .subscribe(trafficBarData => {
-        this.trafficBarData = trafficBarData;
-      });
+    // this.trafficBarService.getTrafficBarData(period)
+    //   .pipe(takeWhile(() => this.alive))
+    //   .subscribe(trafficBarData => {
+    //     this.trafficBarData = trafficBarData;
+    //   });
   }
 
   getTrafficFrontCardData(period: string) {
@@ -53,4 +53,8 @@ export class TrafficRevealCardComponent implements OnDestroy {
   ngOnDestroy() {
     this.alive = false;
   }
+
+
+
+
 }

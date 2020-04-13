@@ -8,7 +8,7 @@ describe('ManejoEntradaToolbarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoEntradaToolbarComponent ],
+      declarations: [ ManejoEntradaToolbarComponent ]
     })
     .compileComponents();
   }));

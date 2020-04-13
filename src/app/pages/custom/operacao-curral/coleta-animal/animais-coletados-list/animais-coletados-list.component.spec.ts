@@ -8,7 +8,7 @@ describe('AnimaisColetadosListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AnimaisColetadosListComponent ],
+      declarations: [ AnimaisColetadosListComponent ]
     })
     .compileComponents();
   }));

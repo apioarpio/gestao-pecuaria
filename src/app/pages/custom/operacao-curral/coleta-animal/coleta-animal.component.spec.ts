@@ -8,7 +8,7 @@ describe('TroncoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ColetaAnimalComponent ],
+      declarations: [ ColetaAnimalComponent ]
     })
     .compileComponents();
   }));

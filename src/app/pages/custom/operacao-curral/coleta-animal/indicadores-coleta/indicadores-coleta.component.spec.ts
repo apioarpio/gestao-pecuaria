@@ -8,7 +8,7 @@ describe('IndicadoresColetaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IndicadoresColetaComponent ],
+      declarations: [ IndicadoresColetaComponent ]
     })
     .compileComponents();
   }));

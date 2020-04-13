@@ -8,7 +8,7 @@ describe('ManejoInternoCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoInternoCreateComponent ],
+      declarations: [ ManejoInternoCreateComponent ]
     })
     .compileComponents();
   }));

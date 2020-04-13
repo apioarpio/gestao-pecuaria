@@ -8,7 +8,7 @@ describe('ManejoEntradaCreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ManejoEntradaCreateComponent ],
+      declarations: [ ManejoEntradaCreateComponent ]
     })
     .compileComponents();
   }));

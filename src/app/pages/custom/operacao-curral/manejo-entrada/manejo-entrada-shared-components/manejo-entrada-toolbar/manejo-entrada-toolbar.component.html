@@ -1,0 +1,21 @@
+<nb-card>
+  <nb-card-body>
+    <div class="manejo-entrada-toolbar">
+      <div class="manejo-entrada-toolbar-back">
+        <button nbButton ghost (click)="voltar()">
+          <nb-icon icon="arrow-ios-back-outline"></nb-icon>
+          Voltar
+        </button>
+      </div>
+      <div class="manejo-entrada-toolbar-title">
+        <h4>{{title}}</h4>
+      </div>
+      <div class="manejo-entrada-toolbar-create">
+        <button nbButton ghost (click)="goCadastro()" [hidden]="hideRightButton">
+          <nb-icon icon="plus-outline"></nb-icon>
+          {{labelRightButton}}
+        </button>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

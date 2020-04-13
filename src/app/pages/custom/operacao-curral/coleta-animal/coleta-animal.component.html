@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-body>
+        <nb-tabset fullWidth>
+          <nb-tab tabTitle="Coleta de Animais">
+            <div class="container-coleta-animais">
+              <ngx-coleta-animais-form></ngx-coleta-animais-form>
+              <ngx-indicadores-coleta></ngx-indicadores-coleta>
+            </div>
+          </nb-tab>
+          <nb-tab tabTitle="Animais Coletados">
+            <nb-flip-card>
+              <nb-card-front style="height: 500px">
+                <nb-card>
+                  <nb-card-body>
+                    <ngx-animais-coletados-list></ngx-animais-coletados-list>
+                  </nb-card-body>
+                </nb-card>
+              </nb-card-front>
+              <nb-card-back>
+                <nb-card>
+                  <nb-card-body>
+                    <ngx-tipos-animais-coletados></ngx-tipos-animais-coletados>
+                  </nb-card-body>
+                </nb-card>
+              </nb-card-back>
+            </nb-flip-card>
+          </nb-tab>
+        </nb-tabset>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+

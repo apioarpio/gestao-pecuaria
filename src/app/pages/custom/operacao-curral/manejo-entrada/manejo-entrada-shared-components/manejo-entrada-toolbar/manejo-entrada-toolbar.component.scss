@@ -1,0 +1,21 @@
+.manejo-entrada-toolbar {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 50px;
+  grid-template-areas: "back header create";
+
+  .manejo-entrada-toolbar-back {
+    justify-self: start;
+    align-self: center;
+  }
+
+  .manejo-entrada-toolbar-title {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .manejo-entrada-toolbar-create {
+    justify-self: end;
+    align-self: center;
+  }
+}

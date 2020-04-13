@@ -1,0 +1,54 @@
+<label class="search-label" for="search">Buscar: </label>
+<input nbInput [nbFilterInput]="dataSource" id="search" class="search-input">
+
+<table [nbTreeGrid]="dataSource" [nbSort]="dataSource" (sort)="updateSort($event)">
+
+  <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+  <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns" [clickToToggle]="false"></tr>
+
+  <ng-container nbTreeGridColumnDef="id">
+    <th nbTreeGridHeaderCell [nbSortHeader]="getSortDirection('id')" *nbTreeGridHeaderCellDef>
+      Codigo
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">
+      {{row.data['id']}}
+    </td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'nome'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Operação'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['nome'] || '-'}}</td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'quantidadeAnimais'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Quantidade de Animais'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['quantidadeAnimais'] || '-'}}</td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'data'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Data'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['data']?.toLocaleDateString() || '-'}}</td>
+  </ng-container>
+
+  <ng-container nbTreeGridColumnDef="options">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>Opções</th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">
+      <button [nbPopover]="optionPopTemplate" nbButton ghost [nbPopoverPlacement]="position">
+        <nb-icon icon="more-vertical-outline"></nb-icon>
+      </button>
+      <ng-template #optionPopTemplate>
+        <button nbButton ghost fullWidth (click)="goColeta()">
+          <nb-icon icon="repeat-outline"></nb-icon>
+          Coletar Animais
+        </button>
+      </ng-template>
+    </td>
+  </ng-container>
+
+</table>

@@ -1,0 +1,36 @@
+<nb-card>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-md-2">
+        <label for="fazenda" class="label">Fazenda</label>
+        <input type="text" id="fazenda" nbInput fullWidth placeholder="Fazenda" disabled value="1"
+               [(ngModel)]="fazenda">
+      </div>
+      <div class="col-md-3">
+        <label for="fazenda" class="label">Código Operação</label>
+        <input type="text" nbInput fullWidth placeholder="Codigo Operação" [(ngModel)]="codOperacao">
+      </div>
+      <div class="col-md-7">
+        <label for="fazenda" class="label">Operação</label>
+        <input type="text" nbInput fullWidth placeholder="Operação" [(ngModel)]="operacao">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <label for="fazenda" class="label">Quantidade Animais</label>
+        <input type="number" nbInput fullWidth placeholder="Quantidade Animais" [(ngModel)]="quantidadeAnimais">
+      </div>
+      <div class="col-md-6">
+        <label for="fazenda" class="label">Daa Operação</label>
+        <input [nbDatepicker]="dataOperacaoPicker" placeholder="Data Operação" nbInput fullWidth
+               [(ngModel)]="dataOperacao"/>
+        <nb-datepicker #dataOperacaoPicker></nb-datepicker>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 save-button">
+        <button nbButton fullWidth status="primary" (click)="salvar()">Salvar</button>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

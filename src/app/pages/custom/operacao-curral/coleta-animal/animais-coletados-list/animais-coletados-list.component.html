@@ -1,0 +1,43 @@
+<table [nbTreeGrid]="dataSource" [nbSort]="dataSource" >
+
+  <tr nbTreeGridHeaderRow *nbTreeGridHeaderRowDef="allColumns"></tr>
+  <tr nbTreeGridRow *nbTreeGridRowDef="let row; columns: allColumns" [clickToToggle]="false"></tr>
+
+  <ng-container nbTreeGridColumnDef="id">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      Codigo
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">
+      {{row.data['id']}}
+    </td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'raca'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Raça'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['raca'] || '-'}}</td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'area'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Area'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['area'] || '-'}}</td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'lote'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Lote'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['lote'] || '-'}}</td>
+  </ng-container>
+
+  <ng-container [nbTreeGridColumnDef]="'aparte'">
+    <th nbTreeGridHeaderCell *nbTreeGridHeaderCellDef>
+      {{'Aparte'}}
+    </th>
+    <td nbTreeGridCell *nbTreeGridCellDef="let row">{{row.data['aparte'] || '-'}}</td>
+  </ng-container>
+
+</table>

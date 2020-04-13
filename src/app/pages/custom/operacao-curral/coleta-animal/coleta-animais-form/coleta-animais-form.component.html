@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-md-6">
+    <label class="label">SISBOV</label>
+    <input fullWidth nbInput>
+  </div>
+  <div class="col-md-6">
+    <label class="label">Peso</label>
+    <input fullWidth nbInput>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="label">Aparte</label>
+    <nb-select fullWidth>
+      <nb-option [value]="1">Aparte 1</nb-option>
+      <nb-option [value]="2">Aparte 2</nb-option>
+      <nb-option [value]="3">Aparte 3</nb-option>
+      <nb-option [value]="4">Aparte 4</nb-option>
+    </nb-select>
+  </div>
+  <div class="col-md-4">
+    <label class="label">Raça</label>
+    <nb-select fullWidth>
+      <nb-option [value]="1">Nelore</nb-option>
+      <nb-option [value]="4">Composto</nb-option>
+      <nb-option [value]="2">Angus</nb-option>
+      <nb-option [value]="3">Red Angus</nb-option>
+    </nb-select>
+  </div>
+  <div class="col-md-4">
+    <label class="label">Idade(Meses)</label>
+    <input nbInput fullWidth>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <label class="label">Data Limite Cota Hilton</label>
+    <input nbInput [nbDatepicker]="cthiltonDPicker" fullWidth>
+    <nb-datepicker #cthiltonDPicker></nb-datepicker>
+  </div>
+  <div class="col-md-4">
+    <label class="label">Umbigo</label>
+    <input nbInput fullWidth>
+  </div>
+  <div class="col-md-4">
+    <label class="label">Frame</label>
+    <input nbInput fullWidth>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <label class="label">Area</label>
+    <input nbInput fullWidth>
+  </div>
+  <div class="col-md-6">
+    <label class="label">Lote</label>
+    <input nbInput fullWidth>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12" style="margin-top: 20px">
+    <button nbButton fullWidth status="primary"> Adicionar Animal</button>
+  </div>
+</div>
